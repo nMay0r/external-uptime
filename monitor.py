@@ -31,6 +31,8 @@ TARGETS = [
     {"name": "wecl1.ru",          "type": "http", "url": "https://wecl1.ru"},
     {"name": "connect.dementiq.ru (VLESS)", "type": "tcp",
      "host": "connect.dementiq.ru", "port": 443},
+    {"name": "test-fake-service", "type": "http",
+     "url": "https://this-domain-does-not-exist-xyz123.com"},
 ]
 
 
