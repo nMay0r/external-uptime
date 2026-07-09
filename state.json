@@ -3,5 +3,8 @@
   "sub.dementiq.ru": "up",
   "wecl1.ru": "up",
   "connect.dementiq.ru (VLESS)": "up",
-  "test-fake-service": "up"
+  "test-fake-service": "down",
+  "dementiq.ru": "up",
+  "panel.dementiq.ru": "up",
+  "vault.dementiq.ru": "up"
 }
