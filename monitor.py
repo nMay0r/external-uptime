@@ -51,7 +51,8 @@ def load_state() -> dict:
     try:
         with open(STATE_FILE) as f:
             return json.load(f)
-    except Exception:
+    except Exception as e:
+        print(f"Ошибка чтения state.json: {e}", file=sys.stderr)
         return {}
 
 
