@@ -42,4 +42,5 @@ jobs:
           git commit -m "update state [skip ci]"
 
           git pull --rebase origin master
-          git push origin master --force-with-lease
+
+          git push origin HEAD:master
