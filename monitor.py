@@ -1,10 +1,4 @@
 #!/usr/bin/env python3
-"""
-Внешний монитор (запускается в GitHub Actions, НЕ на твоём сервере).
-Проверяет домены + VLESS-ноду снаружи. Шлёт алерт в Telegram
-только при смене статуса (up -> down или down -> up),
-чтобы не спамить каждые 5 минут.
-"""
 import json
 import os
 import socket
@@ -19,9 +13,6 @@ TIMEOUT = 10
 BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 
-# Что проверяем. type=http — просто ждём любой ответ сервера (даже 4xx/5xx
-# считается "up", down — только если соединение вообще не установилось).
-# type=tcp — просто открываем сокет на host:port.
 TARGETS = [
     {"name": "dementiq.ru",       "type": "http", "url": "https://dementiq.ru"},
     {"name": "panel.dementiq.ru", "type": "http", "url": "https://panel.dementiq.ru"},
@@ -43,7 +34,6 @@ def check_http(url: str) -> bool:
         urllib.request.urlopen(req, timeout=TIMEOUT)
         return True
     except urllib.error.HTTPError:
-        # сервер ответил (пусть и ошибкой) — значит он жив
         return True
     except Exception:
         return False
@@ -104,7 +94,6 @@ def main():
         new_state[name] = status
 
         if prev_status is None:
-            # первый прогон для этого сервиса — просто фиксируем базу, без алерта
             continue
 
         if status != prev_status:
