@@ -1,10 +1,10 @@
 {
   "kuma.dementiq.ru": "down",
-  "sub.dementiq.ru": "up",
-  "wecl1.ru": "up",
-  "connect.dementiq.ru (VLESS)": "up",
+  "sub.dementiq.ru": "down",
+  "wecl1.ru": "down",
+  "connect.dementiq.ru (VLESS)": "down",
   "test-fake-service": "down",
-  "dementiq.ru": "up",
-  "panel.dementiq.ru": "up",
-  "vault.dementiq.ru": "up"
+  "dementiq.ru": "down",
+  "panel.dementiq.ru": "down",
+  "vault.dementiq.ru": "down"
 }
