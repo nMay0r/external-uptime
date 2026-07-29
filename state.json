@@ -1,8 +1,8 @@
 {
   "kuma.dementiq.ru": "down",
-  "sub.dementiq.ru": "down",
+  "sub.dementiq.ru": "up",
   "wecl1.ru": "down",
-  "connect.dementiq.ru (VLESS)": "down",
+  "connect.dementiq.ru (VLESS)": "up",
   "test-fake-service": "down",
   "dementiq.ru": "up",
   "panel.dementiq.ru": "down",
