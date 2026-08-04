@@ -6,5 +6,5 @@
   "test-fake-service": "down",
   "dementiq.ru": "up",
   "panel.dementiq.ru": "up",
-  "vault.dementiq.ru": "down"
+  "vault.dementiq.ru": "up"
 }
